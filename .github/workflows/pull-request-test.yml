@@ -12,5 +12,7 @@ jobs:
           java-version: '19'
           distribution: 'corretto'
           cache: 'gradle'
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
       - name: Test with Gradle
         run: ./gradlew test
